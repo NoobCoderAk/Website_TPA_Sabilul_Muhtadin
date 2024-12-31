@@ -1,0 +1,1714 @@
+/* !!!!!!!!!!!!!!!!!!!!!!!! GLOBAL SETTINGS !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+body {
+  font-family: sans-serif;
+  color: #1d7e13;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  color: #333;
+}
+
+.footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .logo img {
+  max-width: 100px;
+}
+
+.footer-links,
+.footer-contact {
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer .social-icons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+
+/* navbar */
+#navbar {
+  margin-bottom: 60px;
+}
+
+.bg-custom {
+  background: linear-gradient(to right, #79ac78, #1d7e13);
+}
+
+.navbar {
+  background: linear-gradient(to right, #79ac78, #1d7e13);
+  padding: 0% 10% 0% 10%;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.container-nav {
+  justify-items: end;
+  /* background: yellow; */
+}
+
+#navbarToggler {
+  /* background: plum; */
+}
+
+.nav-item {
+  /* background: #fff; */
+  width: 150px;
+  justify-items: center;
+  margin: 0% 1% 0% 1%;
+}
+
+.navbar ul {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  width: auto;
+  /* margin: 0% 2% 0% 0%; */
+  padding-bottom: 10px;
+}
+
+.navbar-nav {
+  /* background: aqua; */
+}
+
+.nav-item a {
+  color: #fff !important;
+}
+
+.navbar-brand h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* end of navbar */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!! GLOBAL SETTINGS !!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+
+
+/* (((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))) */
+/*((((((((((((((((((((((((((((((((((((( DESKTOP VIEW ))))))))))))))))))))))))))))))))))))))))))))))))))))))))) */
+@media screen and (min-width: 601px) {
+
+  .fab {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 150, 24);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .fab:hover {
+    background-color: rgb(82, 226, 82);
+    transform: scale(1.1);
+  }
+
+  .fab i {
+    font-size: 24px;
+  }
+
+  /* card */
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:
+      -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:
+      -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* end of card  */
+
+
+  /* ================================= halaman home =================================================== */
+
+  /* jumbotron */
+  #heroJumbotron {
+    /* background: #79AC78; */
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 600px;
+  }
+
+  .jumbotron {
+    /* background: #1D7E13; */
+    height: 100%;
+    width: 100%;
+  }
+
+  .jumbotron-inner {
+    /* background: burlywood; */
+    height: 100%;
+    width: 100%;
+  }
+
+  .jumbotron-item {
+    display: flex !important;
+    /*background: blue; */
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Text Container */
+  .c-desc-container {
+    /* background: #79AC78; */
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Title Animation */
+  .c-desc-container h4,
+  .c-desc-container h1 {
+    font-weight: bold !important;
+    margin-left: -1000px;
+    animation-name: text-masuk;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .btn-outline-success {
+    width: 40%;
+  }
+
+  .btn-outline-success:hover {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+    outline: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  /* Description Text Animation */
+  .c-desc {
+    animation-name: text-masuk;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    margin-left: -1000px;
+    height: auto;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Image Animation */
+  .c-img {
+    animation-name: ani;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  /* Keyframe for Text Animation */
+  @keyframes text-masuk {
+    0% {
+      margin-left: -1000px;
+    }
+
+    100% {
+      margin-left: 0;
+    }
+  }
+
+  /* Keyframe for Image Animation */
+  @keyframes ani {
+    0% {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+    }
+
+    100% {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50% 20% 50% 70%;
+    }
+  }
+
+  /* end of jumbotron */
+
+  /* News */
+
+  #news {
+    /* background: aqua; */
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .news-header {
+    /* background: #79AC78; */
+    /* text-align: center; */
+  }
+
+  .news-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .news-inner {
+    /* background: burlywood; */
+    height: auto;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .news-container {
+    /* background: #1D7E13; */
+    height: auto;
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  .news-card {
+    padding: 1.5%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 550px;
+    margin-right: 4%;
+  }
+
+  .news-card h5 {
+    font-weight: bold;
+  }
+
+  .news-card-body {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .news-card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .btn-card {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  .news-more-button {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+    justify-items: auto;
+    border: none;
+    width: 16rem;
+    height: 3rem;
+    align-content: center;
+  }
+
+  /* end of news */
+
+  /* Fasilitas */
+  .card-body a {
+    border: none;
+  }
+
+  #fasilitas {
+    /* background: aqua; */
+    background-image: url('/Assets/Images/template/fasilitas-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    height: auto;
+    margin-bottom: 5rem;
+    margin-top: 6%;
+  }
+
+  .fasilitas-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+  }
+
+  .fasilitas-header {
+    /* background: #79AC78; */
+    /* text-align: center; */
+  }
+
+  .fasilitas-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .fasilitas-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .fasilitas-card-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 600px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .fasilitas-card-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .fasilitas-card {
+    position: relative;
+    background: #fff;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+  }
+
+  .fasilitas-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  .centered {
+    /* height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background: rgb(26, 25, 25);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    opacity: 0.6; */
+
+    height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    /* 0.6 is opacity  */
+    background: rgba(75, 75, 75, 0.6);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    transition: height 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.6; */
+  }
+
+  .card:hover .centered {
+    height: 100%;
+    border-radius: 10px;
+    /* Apply rounded corners to the entire card */
+  }
+
+  .centered p {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  /* end of Fasilitas */
+
+  /* prestasi */
+  #prestasi {
+    /* background: aqua; */
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .prestasi-header {
+    /* background: #79AC78; */
+    /* text-align: center; */
+  }
+
+  .prestasi-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .prestasi-container {
+    /* background: yellow; */
+    height: auto;
+    /* padding: 1%; */
+  }
+
+  .prestasi-card {
+    /* background: #79AC78; */
+    height: 400px;
+    max-width: 1500px;
+    min-width: 300px;
+    max-height: 400px;
+    min-height: 400px;
+    margin-bottom: 2%;
+    border-radius: 10px 10px 10px 10px;
+    /* padding: 1%; */
+  }
+
+  .prestasi-img-container {
+    /* background: grey; */
+    height: 100%;
+    padding: 0%;
+    max-height: 400px;
+    min-height: 300px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .prestasi-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .prestasi-desc-container {
+    /* background: red; */
+    height: 100%;
+    max-height: 400px;
+    min-height: 300px;
+    align-content: center;
+    padding: 1%;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .prestasi-more-button {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+    justify-items: auto;
+    border: none;
+    width: 16rem;
+    height: 3rem;
+    align-content: center;
+  }
+
+  /* end of prestasi */
+
+  /* Review */
+
+  .review-header {
+    background: rgba(17, 17, 17, 0);
+    /* background: #01A149; */
+    margin-bottom: 4%;
+  }
+
+  .review-header h2 {
+    /* background-color: pink; */
+    text-align: center;
+  }
+
+  #review {
+    /* background: aqua; */
+    background-image: url('/Assets/Images/template/testimoni-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .review-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+  }
+
+  .review-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .review-card-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 600px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .review-card-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .review-card {
+    position: relative;
+    background: #fff;
+    margin-right: 2%;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+  }
+
+  .review-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    object-fit: fill;
+  }
+
+  .centered-review {
+    height: 100%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    /* opacity: 0.6; */
+    align-content: center;
+    justify-items: center;
+  }
+
+  .centered-review p {
+    text-align: center;
+    width: 80%;
+    color: #000;
+    /* background: #01A149; */
+    /* font-weight: bold; */
+  }
+
+  /* end of Review */
+
+  /* ========================================= end halaman home ============================================================== */
+
+  /* ========================================= halaman artikel ============================================================== */
+  #news-page {
+    /* background: aqua; */
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    padding: 0.2%;
+    margin-bottom: 5rem;
+  }
+
+  .news-page-header {
+    /* background: #79AC78; */
+    text-align: center;
+  }
+
+  .news-page-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .news-page-inner {
+    /* background: burlywood; */
+    height: auto;
+    width: 100%;
+    padding: 0.2%;
+    margin: 0%;
+  }
+
+  .news-page-container {
+    /* background: #1D7E13; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    padding: 0.2%;
+    margin-top: 0%;
+  }
+
+  .news-page-card {
+    padding: 1.5%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 550px;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .news-page-card h5 {
+    font-weight: bold;
+  }
+
+  .news-page-card-body {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .news-page-card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .news-page-btn-card {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  /* end of news */
+
+  /* ========================================= end halaman artikel ========================================================== */
+
+
+  /* ========================================= halaman prestasi ========================================================== */
+  /* prestasi */
+  #prestasi-page {
+    /* background: aqua; */
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .prestasi-page-header {
+    /* background: #79AC78; */
+    /* text-align: center; */
+  }
+
+  .prestasi-page-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .prestasi-page-container {
+    /* background: yellow; */
+    height: auto;
+    /* padding: 1%; */
+  }
+
+  .prestasi-page-card {
+    /* background: #79AC78; */
+    height: 400px;
+    max-width: 1500px;
+    min-width: 300px;
+    max-height: 400px;
+    min-height: 400px;
+    margin-bottom: 2%;
+    border-radius: 10px 10px 10px 10px;
+    /* padding: 1%; */
+  }
+
+  .prestasi-page-img-container {
+    /* background: grey; */
+    height: 100%;
+    padding: 0%;
+    max-height: 400px;
+    min-height: 300px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .prestasi-page-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .prestasi-page-desc-container {
+    /* background: red; */
+    height: 100%;
+    max-height: 400px;
+    min-height: 300px;
+    align-content: center;
+    padding: 1%;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  /* end of prestasi */
+  /* ========================================= end halaman prestasi ========================================================== */
+
+  #iqro {
+    background-image: url('/Assets/Images/template/iqro-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+  }
+
+  #alquran {
+    background-image: url('/Assets/Images/template/alquran-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+  }
+
+  /* ========================================= halaman jadwal ========================================================== */
+
+
+  /* ========================================= end halaman jadwal ========================================================== */
+
+  /* ======================================== halaman about ================================================================= */
+
+  /* About Jumbotron */
+
+  .aboutJumbotron-container {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  .aboutJumbotron-img-container {}
+
+  .aboutJumbotron-img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 500px;
+  }
+
+  .aboutJumbotron-desc-container {}
+
+  .aboutJumbotron-desc-inner {
+    max-width: 100%;
+  }
+
+  /* end About Jumbotron */
+
+
+  /* About Visi Misi */
+  #aboutVisiMisi {
+    border-radius: 8px;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .aboutVisiMisi-visi {}
+
+  .aboutVisiMisi-misi {}
+
+  .aboutVisiMisi-tujuan {}
+
+  .aboutVisiMisi-mutu {}
+
+  /* end About Visi Misi */
+
+
+  /* Tenaga Pengajar */
+
+  #aboutTenagaPengajar {
+    /* background: aqua; */
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    padding: 0.2%;
+    margin-bottom: 5rem;
+  }
+
+  .aboutTenagaPengajar-header {
+    /* background: #79AC78; */
+    text-align: center;
+  }
+
+  .aboutTenagaPengajar-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .aboutTenagaPengajar-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    padding: 0.2%;
+    margin: 0%;
+  }
+
+  .aboutTenagaPengajar-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 600px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .aboutTenagaPengajar-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .aboutTenagaPengajar-card {
+    position: relative;
+    background: #fff;
+    margin-right: 2%;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+  }
+
+  .aboutTenagaPengajar-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    object-fit: cover;
+  }
+
+  .aboutCentered-pengajar {
+    height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    /* 0.6 is opacity  */
+    background: rgba(75, 75, 75, 0.6);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    transition: height 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.6; */
+  }
+
+  /* Hover effect */
+  .card:hover .aboutCentered-pengajar {
+    height: 100%;
+    border-radius: 10px;
+    /* Apply rounded corners to the entire card */
+  }
+
+  .aboutCentered-pengajar p {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  /* end of Tenaga Pengajar */
+}
+
+/* ((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))) */
+/*((((((((((((((((((((((((((((((((((( MOBILE VIEW )))))))))))))))))))))))))))))))))))))))))))))))))))))))*/
+@media screen and (max-width: 600px) {
+
+  #navbar {
+    margin-bottom: 20%;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:
+      -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:
+      -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* end of card  */
+
+  /* ============================================== halaman home ======================================= */
+
+
+  /* jumbotron */
+  #heroJumbotron {
+    margin-bottom: 20%;
+    padding: 0;
+  }
+
+  .c-desc-container h4 {
+    font-size: 1.25rem;
+  }
+
+  .c-desc-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .c-desc-container p {
+    font-size: 1 rem;
+  }
+
+  .c-desc {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .btn-outline-success {
+    width: 40%;
+  }
+
+  .btn-outline-success:hover {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  .c-img {
+    width: 92%;
+    justify-self: center !important;
+    border-radius: 10%;
+    margin-top: 20px;
+  }
+
+
+  /* end of jumbotron */
+
+  /* News */
+  #news {
+    /* background: aqua; */
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    padding: 0.2%;
+    margin-bottom: 5rem;
+  }
+
+  .news-header {
+    /* background: #79AC78; */
+  }
+
+  .news-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background: pink; */
+  }
+
+  .news-inner {
+    /* background: burlywood; */
+    height: auto;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .news-container {
+    /* background: #1D7E13; */
+    height: auto;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .news-card {
+    padding: 2%;
+    max-width: 360px;
+    min-width: 200px;
+    height: 350px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .news-card h5 {
+    font-weight: bold;
+  }
+
+  .news-card-body {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .news-card-img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .btn-card {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  .news-more-button {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+    justify-items: auto;
+    border: none;
+    width: 16rem;
+    height: 3rem;
+    width: 50%;
+    align-content: center;
+  }
+
+  /* end of news */
+
+  /* Fasilitas */
+
+  #fasilitas {
+    /* background: aqua; */
+    margin-top: 6%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    padding: 0.2%;
+    margin-bottom: 5rem;
+  }
+
+  .fasilitas-header {
+    /* background: #79AC78; */
+  }
+
+  .fasilitas-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .fasilitas-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .fasilitas-card-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 600px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .fasilitas-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .fasilitas-card {
+    position: relative;
+    background: #fff;
+    margin-right: 2%;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+  }
+
+  .fasilitas-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    min-height: 200px;
+    object-fit: cover;
+  }
+
+
+
+  .centered {
+    /* height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    background: rgb(26, 25, 25);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    opacity: 0.6; */
+
+    height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    /* 0.6 is opacity  */
+    background: rgba(75, 75, 75, 0.6);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    transition: height 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.6; */
+  }
+
+  .card:hover .centered {
+    height: 100%;
+    border-radius: 10px;
+    /* Apply rounded corners to the entire card */
+  }
+
+  .centered p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  /* end of Fasilitas */
+
+  /* prestasi */
+  #prestasi {
+    /* background: aqua; */
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 600px;
+    padding: 0.2%;
+    margin-bottom: 0%;
+  }
+
+  .prestasi-header {
+    /* background: #79AC78; */
+  }
+
+  .prestasi-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .prestasi-container {
+    /* background: yellow; */
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 400px;
+  }
+
+  .prestasi-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .prestasi-card {
+    /* background: #79AC78; */
+    max-width: 500px;
+    min-width: 300px;
+    height: 400px;
+    max-height: 400px;
+    margin-right: 2%;
+    padding: 2%;
+    border-radius: 10px 10px 10px 10px;
+    /* padding: 1%; */
+  }
+
+  .prestasi-img-container {
+    /* background: grey; */
+    height: 100%;
+    padding: 0%;
+    max-height: 200px;
+    min-height: 200px;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .prestasi-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .prestasi-desc-container {
+    /* background: red; */
+    height: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    align-content: center;
+    padding: 1%;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .prestasi-more-button {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+    justify-items: auto;
+    border: none;
+    width: 50%;
+    height: 3rem;
+    align-content: center;
+  }
+
+  /* end of prestasi */
+
+  /* Review */
+  .review-header {
+    /* background: #01A149; */
+    margin-bottom: 10%;
+  }
+
+  .review-header h2 {
+    /* background-color: pink; */
+    text-align: center;
+  }
+
+  #review {
+    /* background: aqua; */
+    margin-top: 8%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .review-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .review-card-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 220px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .review-card-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .review-card {
+    position: relative;
+    background: #fff;
+    margin-right: 2%;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+  }
+
+  .review-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    min-height: 200px;
+    object-fit: fill;
+  }
+
+  .centered-review {
+    height: 100%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    /* opacity: 0.6; */
+    align-content: center;
+    justify-items: center;
+  }
+
+  .centered-review p {
+    text-align: center;
+    width: 80%;
+    font-size: 0.9rem;
+    color: #000;
+    /* background: #01A149; */
+    /* font-weight: bold; */
+  }
+
+  /* end of Review */
+
+  /* ======================================= end of halaman home ======================================= */
+
+
+  /* ========================================= halaman artikel ========================================= */
+  #news-page {
+    /* background: aqua; */
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  .news-page-header {
+    /* background: #79AC78; */
+    text-align: center;
+  }
+
+  .news-page-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .news-page-inner {
+    /* background: burlywood; */
+    height: auto;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .news-page-container {
+    /* background: #1D7E13; */
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  .news-page-card {
+    padding: 2%;
+    max-width: 100%;
+    min-width: 300px;
+    margin-bottom: 4%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .news-page-card h5 {
+    font-weight: bold;
+  }
+
+  .news-page-card-body {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .news-page-card-img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .news-page-btn-card {
+    background: linear-gradient(to right, #79ac78, #1d7e13);
+  }
+
+  /* end of news */
+
+  /* ========================================= end halaman artikel ===================================== */
+
+
+
+  /* ========================================= halaman prestasi ===================================== */
+  /* prestasi */
+  #prestasi-page {
+    /* background: aqua; */
+    margin-top: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 600px;
+    padding: 0.2%;
+    margin-bottom: 0%;
+  }
+
+  .prestasi-page-header {
+    /* background: #79AC78; */
+  }
+
+  .prestasi-page-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .prestasi-page-container {
+    /* background: yellow; */
+  }
+
+  .prestasi-page-card {
+    /* background: #79AC78; */
+    max-width: 500px;
+    min-width: 300px;
+    height: 400px;
+    max-height: 400px;
+    margin-bottom: 4%;
+    padding: 2%;
+    border-radius: 10px 10px 10px 10px;
+    /* padding: 1%; */
+  }
+
+  .prestasi-page-img-container {
+    /* background: grey; */
+    height: 100%;
+    padding: 0%;
+    max-height: 200px;
+    min-height: 200px;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .prestasi-page-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .prestasi-page-desc-container {
+    /* background: red; */
+    height: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    align-content: center;
+    padding: 1%;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  /* end of prestasi */
+  /* ========================================= end halaman prestasi ===================================== */
+
+
+
+  /* ========================================= halaman about ===================================== */
+
+  /* About Jumbotron */
+
+  #aboutJumbotron {
+    width: 92%;
+    margin: auto;
+  }
+
+  .aboutJumbotron-container {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  .aboutJumbotron-img-container {}
+
+  .aboutJumbotron-img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 500px;
+  }
+
+  .aboutJumbotron-desc-container {}
+
+  .aboutJumbotron-desc-inner {
+    max-width: 100%;
+  }
+
+  .aboutJumbotron-desc p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  /* end About Jumbotron */
+
+
+  /* About Visi Misi */
+
+  #aboutVisiMisi {
+    border-radius: 8px;
+    width: 92%;
+    margin: auto;
+    text-align: justify;
+  }
+
+  #aboutVisiMisi p li {
+    font-size: 1rem;
+  }
+
+  .aboutVisiMisi-visi {}
+
+  .aboutVisiMisi-misi {}
+
+  .aboutVisiMisi-tujuan {}
+
+  .aboutVisiMisi-mutu {}
+
+  /* end About Visi Misi */
+
+
+  /* Tenaga Pengajar */
+
+  #aboutTenagaPengajar {
+    /* background: aqua; */
+    margin: 0%;
+    height: auto;
+    padding: 0.2%;
+    width: 92%;
+    margin: auto;
+  }
+
+  .aboutTenagaPengajar-header {
+    /* background: #79AC78; */
+    text-align: center;
+  }
+
+  .aboutTenagaPengajar-header h2 {
+    font-weight: bold;
+    height: 3rem;
+    /* background:pink;  */
+  }
+
+  .aboutTenagaPengajar-inner {
+    /* background: burlywood; */
+    max-height: 610px;
+    width: 100%;
+    padding: 0.2%;
+    margin: 0%;
+  }
+
+  .aboutTenagaPengajar-container {
+    display: flex;
+    overflow-x: auto;
+    /* background: #1D7E13; */
+    max-height: 600px;
+    width: 100%;
+    padding: 0% 2% 2% 2%;
+    margin-top: 0%;
+  }
+
+  .aboutTenagaPengajar-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .aboutTenagaPengajar-card {
+    position: relative;
+    background: #fff;
+    margin-right: 2%;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .aboutTenagaPengajar-card-img {
+    border-radius: 10px;
+    padding: 0%;
+    width: 300px;
+    min-width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .aboutCentered-pengajar {
+    height: 15%;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    /* background: rgb(26, 25, 25); */
+    /* 0.6 is opacity  */
+    background: rgba(75, 75, 75, 0.6);
+    bottom: 0%;
+    border-radius: 0px 0px 10px 10px;
+    transition: height 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.6; */
+  }
+
+  /* Hover effect */
+  .card:hover .aboutCentered-pengajar {
+    height: 100%;
+    border-radius: 10px;
+    /* Apply rounded corners to the entire card */
+  }
+
+  .aboutCentered-pengajar p {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  /* end of Tenaga Pengajar */
+
+  /* ========================================= end halaman about ===================================== */
+
+}

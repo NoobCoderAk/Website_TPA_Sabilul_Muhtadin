@@ -1,0 +1,55 @@
+@media(min-width:601px) {
+  .card-container {
+    justify-content: space-between;
+    background-color: #446E9C;
+    padding: 2%;
+    border-radius: 20px;
+    height: 160px !important;
+    max-height: 160px !important;
+  }
+
+  .card-inner {
+    background: yellow;
+    margin-top: 10px !important;
+    /* height: 160px !important;
+    max-height: 160px !important; */
+    width: 1000px;
+  }
+
+  .dash-card {
+    width: auto;
+    max-width: 380px !important;
+    max-height: 160px !important;
+  }
+
+  .card-text-container {
+    width: auto;
+    height: auto;
+    max-height: 120px;
+    /* background: red; */
+  }
+
+  .card-text-container p {
+    /* background: cadetblue; */
+    display: flex;
+    justify-self: center;
+    font-size: 4rem;
+  }
+
+  .card-text-container h5 {
+    /* background: cadetblue; */
+    display: flex;
+    justify-self: center;
+  }
+
+  .card-img-container {
+    width: auto;
+    height: auto;
+    padding: 2%;
+  }
+
+  .card-img {
+    max-width: 124px;
+    max-height: 124px;
+  }
+}
