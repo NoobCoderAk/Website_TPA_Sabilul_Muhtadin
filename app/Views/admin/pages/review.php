@@ -77,9 +77,8 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header  bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Review</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/review/'); ?>" method="post" enctype="multipart/form-data">
@@ -110,9 +109,8 @@
         <div class="modal fade" id="editModal<?= $review->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Review</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/review/' . $review->id); ?>" method="post" enctype="multipart/form-data">
@@ -142,9 +140,8 @@
         <div class="modal fade" id="hapusModal<?= $review->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header  bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Review</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/review/' . $review->id); ?>" method="post">
@@ -152,7 +149,7 @@
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
                                 <!-- <input type="hidden" name="_DELETE"> -->
-                                <p> Apakah anda yakin untuk menghapus Galeri <?= ' "', $review->nama, '" '  ?> ini ?</p>
+                                <p> Apakah anda yakin untuk menghapus Review <?= ' "', $review->nama, '" '  ?> ini ?</p>
                             </div>
                     </div>
                     <div class="modal-footer">

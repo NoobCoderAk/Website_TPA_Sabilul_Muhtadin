@@ -27,7 +27,7 @@
                                         if (alertElement) {
                                             alertElement.remove();
                                         }
-                                    }, 2000); // 3000ms = 3 seconds
+                                    }, 2000); // 1000ms = 1 seconds
                                 </script>
                             <?php endif; ?>
 
@@ -53,7 +53,11 @@
                                                 <td><?= $no++ ?></td>
                                                 <td><img src="<?= base_url("Assets/Images/Prestasi/" . $prestasi->gambar) ?>" style="height:100px; width:100px;" alt=""></td>
                                                 <td><?= $prestasi->judul ?></td>
-                                                <td><?= $prestasi->deskripsi ?></td>
+                                                <td style="max-width: 400px;">
+                                                    <p style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px;">
+                                                        <?= $prestasi->deskripsi ?>
+                                                    </p>
+                                                </td>
                                                 <td><?= $prestasi->author ?></td>
                                                 <td><?= $prestasi->tanggal_input ?></td>
                                                 <td><?= $prestasi->tanggal_edit ?></td>
@@ -79,9 +83,8 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Prestasi</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/prestasi/'); ?>" method="post" enctype="multipart/form-data">
@@ -99,8 +102,6 @@
                             <label for="gambar_prestasi">Gambar </label>
                             <input type="file" name="gambar_prestasi" id="gambar_prestasi" class="form-control" required>
                         </div>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Batal</button>
@@ -117,9 +118,8 @@
         <div class="modal fade" id="editModal<?= $prestasi->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Prestasi</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/prestasi/' . $prestasi->id); ?>" method="post" enctype="multipart/form-data">
@@ -154,9 +154,8 @@
         <div class="modal fade" id="hapusModal<?= $prestasi->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Prestasi</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/hapus/prestasi/' . $prestasi->id); ?>" method="post">

@@ -79,6 +79,7 @@
                 // Format the date
                 const inputDate = new Date(data.tanggal_input);
                 const options = {
+                    weekday: 'long',
                     day: '2-digit',
                     month: 'long',
                     year: 'numeric'
@@ -119,6 +120,7 @@
                 // Format the date
                 const inputDate = new Date(data.tanggal_input);
                 const options = {
+                    weekday: 'long',
                     day: '2-digit',
                     month: 'long',
                     year: 'numeric'

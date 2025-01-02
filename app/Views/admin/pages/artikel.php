@@ -27,7 +27,7 @@
                                         if (alertElement) {
                                             alertElement.remove();
                                         }
-                                    }, 2000); // 3000ms = 3 seconds
+                                    }, 2000); // 1000ms = 1 seconds
                                 </script>
                             <?php endif; ?>
 
@@ -53,12 +53,14 @@
                                                 <td><?= $no++ ?></td>
                                                 <td><img src="<?= base_url("Assets/Images/Artikel/" . $artikel->gambar) ?>" style="height:100px; width:100px;" alt=""></td>
                                                 <td><?= $artikel->judul ?></td>
-                                                <td><?= $artikel->deskripsi ?></td>
+                                                <td style="max-width: 400px; ">
+                                                    <p style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 300px;"><?= $artikel->deskripsi ?></p>
+                                                </td>
                                                 <td><?= $artikel->author ?></td>
                                                 <td><?= $artikel->tanggal_input ?></td>
                                                 <td><?= $artikel->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $artikel->id ?>"><i class="fas fa-edit"></i>Edit</button>
+                                                    <button type=" button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $artikel->id ?>"><i class="fas fa-edit"></i>Edit</button>
                                                     <button type="button" class="btn btn-danger btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $artikel->id ?>"><i class="fas fa-trash"></i>Hapus</button>
                                                 </td>
                                             </tr>
@@ -79,12 +81,11 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Artikel</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url('admin/add/artikel/'); ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('admin/add/artikel/'); ?>" method="post" enctype="multipart/form-data" id="tambahArtikel">
                         <?= csrf_field(); ?>
                         <div class="mb-3">
                             <label for="judul_artikel">Judul </label>
@@ -117,9 +118,8 @@
         <div class="modal fade" id="editModal<?= $artikel->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Artikel</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/artikel/' . $artikel->id); ?>" method="post" enctype="multipart/form-data">
@@ -154,9 +154,8 @@
         <div class="modal fade" id="hapusModal<?= $artikel->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus artikel</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/artikel/' . $artikel->id); ?>" method="post">

@@ -16,9 +16,9 @@
                             <img src="<?= base_url('/Assets/Images/Prestasi/' . $data->gambar); ?>" alt="" class="prestasi-page-img img-fluid">
                         </div>
                         <div class="col-12 col-md-6 prestasi-page-desc-container">
-                            <h5 class="card-title"><?= $data->judul; ?></h5>
-                            <p class="card-text"><?= $data->deskripsi; ?></p>
-                            <p class="card-text"><small class="text-body-secondary"><?= date('d F Y', strtotime($data->tanggal_input)); ?></small></p>
+                            <h5 class="card-title"><?= htmlspecialchars($data->judul); ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($data->deskripsi); ?></p>
+                            <p class="card-text"><small class="text-body-secondary"><?= date('l, d F Y', strtotime($data->tanggal_edit)); ?></small></p>
                             <a class="btn btn-card text-light shadow-md" onclick="loadPrestasiDetail(<?= $data->id ?>)" data-bs-toggle="modal" data-bs-target="#prestasiDetailModal">Baca Selengkapnya</a>
                         </div>
 
@@ -36,11 +36,35 @@
                             </div>
                             <div class="modal-body" id="prestasiDetailContent">
                                 <!-- prestasi content will load here dynamically -->
-                                <img id="prestasiDetailGambar" src="<?= base_url('/Assets/Images/Prestasi/' . $data->gambar); ?>" class="card-img-top news-page-card-img" alt="...">
-                                <h5 id="prestasiDetailTitle"><?= $data->judul; ?></h5>
-                                <p id="prestasiDetailDesc"><?= $data->deskripsi; ?></p>
-                                <p id="prestasiDetailAuthor"><?= $data->author; ?></p>
-                                <p id="prestasiDetailDate"><?= date('d F Y', strtotime($data->tanggal_input)); ?></p>
+                                <div class="container">
+                                    <div class="row bg-white shadow-sm rounded p-3" style="max-width: 900px; margin: auto;">
+                                        <!-- Image Section -->
+                                        <div class="col-md-4 mb-3 mb-md-0">
+                                            <img id="prestasiDetailGambar"
+                                                src="<?= base_url('/Assets/Images/Prestasi/' . htmlspecialchars($data->gambar)); ?>"
+                                                alt="Prestasi Image"
+                                                class="img-fluid rounded"
+                                                style="max-height: 200px; width: 100%; object-fit: cover;">
+                                        </div>
+                                        <!-- Content Section -->
+                                        <div class="col-md-8">
+                                            <h5 class="fw-bold text-uppercase" style="color: #333;" id="prestasiDetailTitle">
+                                                <?= htmlspecialchars($data->judul); ?>
+                                            </h5>
+                                            <p style="font-size: 14px; line-height: 1.6; color: #555;" id="prestasiDetailDesc">
+                                                <?= nl2br(htmlspecialchars($data->deskripsi)); ?>
+                                            </p>
+                                            <div class="row text-muted small mt-2">
+                                                <div class="col text-end">
+                                                    <p>
+                                                        <span id="prestasiDetailDate"><?= date('l, d F Y', strtotime($data->tanggal_edit)); ?></span> Oleh
+                                                        <span id="prestasiDetailAuthor"><?= htmlspecialchars($data->author); ?></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

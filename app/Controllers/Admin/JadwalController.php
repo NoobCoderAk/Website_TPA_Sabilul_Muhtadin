@@ -21,8 +21,16 @@ class JadwalController extends BaseController
             'title' => 'Jadwal Menu',
             'daftar_mapel_iqro' => $this->MapelIqroModel->FindAll(),
             'daftar_mapel_quran' => $this->MapelQuranModel->FindAll(),
-            'daftar_jadwal_iqro' => $this->JadwalIqroModel->findAll(), // updated to use findAll
-            'daftar_jadwal_quran' => $this->JadwalQuranModel->findAll(), // updated to use findAll
+            'daftar_jadwal_iqro' => $this->JadwalIqroModel
+                ->select('jadwal_iqro.*, mata_pelajaran_iqro.nama_mata_pelajaran, tenaga_pengajar.nama, tenaga_pengajar.gambar')
+                ->join('mata_pelajaran_iqro', 'mata_pelajaran_iqro.id = jadwal_iqro.mata_pelajaran_id')
+                ->join('tenaga_pengajar', 'tenaga_pengajar.id = jadwal_iqro.tenaga_pengajar_id')
+                ->findAll(), // updated to use findAll
+            'daftar_jadwal_quran' => $this->JadwalQuranModel
+                ->select('jadwal_quran.*, mata_pelajaran_quran.nama_mata_pelajaran, tenaga_pengajar.nama, tenaga_pengajar.gambar')
+                ->join('mata_pelajaran_quran', 'mata_pelajaran_quran.id = jadwal_quran.mata_pelajaran_id')
+                ->join('tenaga_pengajar', 'tenaga_pengajar.id = jadwal_quran.tenaga_pengajar_id')
+                ->findAll(), // updated to use findAll
             'daftar_pengajar' => $this->PengajarModel->findAll(), // updated to use findAll
         ];
         return view('admin/pages/jadwal', $data);

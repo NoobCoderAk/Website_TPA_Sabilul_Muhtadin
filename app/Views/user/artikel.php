@@ -14,9 +14,9 @@
                     <div class="news-page-card card col-lg-3  col-12">
                         <img src="<?= base_url('/Assets/Images/Artikel/' . $data->gambar); ?>" class="card-img-top news-page-card-img" alt="Image of Quranic study session">
                         <div class="card-body news-page-card-body">
-                            <h5 class="card-title"><?= $data->judul; ?></h5>
-                            <p class="card-text"><?= $data->deskripsi; ?></p>
-                            <p class="card-text"><small class="text-body-secondary"><?= date('d F Y', strtotime($data->tanggal_input)); ?></small></p>
+                            <h5 class="card-title"><?= htmlspecialchars($data->judul); ?></h5>
+                            <p class="card-text"><?= htmlspecialchars($data->deskripsi); ?></p>
+                            <p class="card-text"><small class="text-body-secondary"><?= date('l, d F Y', strtotime($data->tanggal_edit)); ?></small></p>
                             <a class="btn btn-card text-light shadow-md" onclick="loadArticleDetail(<?= $data->id ?>)" data-bs-toggle="modal" data-bs-target="#articleDetailModal">Baca Selengkapnya</a>
                         </div>
                     </div>
@@ -44,11 +44,35 @@
                 </div>
                 <div class="modal-body" id="articleDetailContent">
                     <!-- Article content will load here dynamically -->
-                    <img id="articleDetailGambar" src="<?= base_url('/Assets/Images/Artikel/' . $data->gambar); ?>" class="card-img-top news-page-card-img" alt="...">
-                    <h5 id="articleDetailTitle"><?= $data->judul; ?></h5>
-                    <p id="articleDetailDesc"><?= $data->deskripsi; ?></p>
-                    <p id="articleDetailAuthor"><?= $data->author; ?></p>
-                    <p id="articleDetailDate"><?= date('d F Y', strtotime($data->tanggal_input)); ?></p>
+                    <div class="container">
+                        <div class="row bg-white shadow-sm rounded p-3" style="max-width: 900px; margin: auto;">
+                            <!-- Image Section -->
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <img id="articleDetailGambar"
+                                    src="<?= base_url('/Assets/Images/Artikel/' . htmlspecialchars($data->gambar)); ?>"
+                                    alt="Santri Image"
+                                    class="img-fluid rounded"
+                                    style="max-height: 200px; width: 100%; object-fit: cover;">
+                            </div>
+                            <!-- Content Section -->
+                            <div class="col-md-8">
+                                <h5 class="fw-bold text-uppercase" style="color: #333;" id="articleDetailTitle">
+                                    <?= htmlspecialchars($data->judul); ?>
+                                </h5>
+                                <p style="font-size: 14px; line-height: 1.6; color: #555;" id="articleDetailDesc">
+                                    <?= nl2br(htmlspecialchars($data->deskripsi)); ?>
+                                </p>
+                                <div class="row text-muted small mt-2">
+                                    <div class="col text-end">
+                                        <p>
+                                            <span id="articleDetailDate"><?= date('l, d F Y', strtotime($data->tanggal_edit)); ?></span> Oleh
+                                            <span id="articleDetailAuthor"><?= htmlspecialchars($data->author); ?></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

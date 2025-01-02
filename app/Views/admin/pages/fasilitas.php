@@ -75,9 +75,8 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Fasilitas</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/fasilitas'); ?>" method="post" enctype="multipart/form-data">
@@ -105,9 +104,8 @@
         <div class="modal fade" id="editModal<?= $fasilitas->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header  bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Fasilitas</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/fasilitas/' . $fasilitas->id); ?>" method="post" enctype="multipart/form-data">
@@ -136,9 +134,8 @@
         <div class="modal fade" id="hapusModal<?= $fasilitas->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header  bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Fasilitas</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/fasilitas/' . $fasilitas->id); ?>" method="post">

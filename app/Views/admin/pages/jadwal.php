@@ -57,47 +57,15 @@
                                                 <td><?= $jadwalIqro->hari ?></td>
                                                 <!-- Fetching Teacher Name -->
                                                 <td>
-                                                    <?php
-                                                    // Find the teacher by ID
-                                                    $pengajar = array_filter($daftar_pengajar, function ($p) use ($jadwalIqro) {
-                                                        return $p->id == $jadwalIqro->tenaga_pengajar_id;
-                                                    });
-                                                    // Display teacher name
-                                                    echo !empty($pengajar) ? reset($pengajar)->nama : 'Unknown';
-                                                    ?>
+                                                    <?= $jadwalIqro->nama; ?>
                                                 </td>
                                                 <!-- Fetching Subject Name -->
                                                 <td>
-                                                    <?php
-                                                    // Find the subject by ID
-                                                    $mapel = array_filter($daftar_mapel_iqro, function ($m) use ($jadwalIqro) {
-                                                        return $m->id == $jadwalIqro->mata_pelajaran_id;
-                                                    });
-                                                    // Display subject name
-                                                    echo !empty($mapel) ? reset($mapel)->nama_mata_pelajaran : 'Unknown';
-                                                    ?>
+                                                    <?= $jadwalIqro->nama_mata_pelajaran; ?>
                                                 </td>
                                                 <td><?= $jadwalIqro->jam ?></td>
                                                 <td>
-                                                    <?php
-                                                    // Find the subject by ID
-                                                    $pengajar = array_filter($daftar_pengajar, function ($p) use ($jadwalIqro) {
-                                                        return $p->id == $jadwalIqro->tenaga_pengajar_id;
-                                                    });
-                                                    // Display teacher's image if available
-                                                    if (!empty($pengajar)) {
-                                                        $pengajar = reset($pengajar);
-                                                        // Check if the image exists
-                                                        if (!empty($pengajar->gambar)) {
-                                                            // Display the image
-                                                            echo '<img src="' . base_url('/Assets/Images/Pengajar/' . $pengajar->gambar) . '" alt="Teacher Image" width="50">';
-                                                        } else {
-                                                            echo 'No image available';
-                                                        }
-                                                    } else {
-                                                        echo 'Teacher not found';
-                                                    }
-                                                    ?>
+                                                    <img src="<?= base_url('/Assets/Images/Pengajar/' . $jadwalIqro->gambar) ?> " alt="gambar guru" style="width: 50px; height: 50px;">
                                                 </td>
                                                 <td><?= $jadwalIqro->tanggal_input ?></td>
                                                 <td><?= $jadwalIqro->tanggal_edit ?></td>
@@ -172,47 +140,15 @@
                                                 <td><?= $jadwalQuran->hari ?></td>
                                                 <!-- Fetching Teacher Name -->
                                                 <td>
-                                                    <?php
-                                                    // Find the teacher by ID
-                                                    $pengajar = array_filter($daftar_pengajar, function ($p) use ($jadwalQuran) {
-                                                        return $p->id == $jadwalQuran->tenaga_pengajar_id;
-                                                    });
-                                                    // Display teacher name
-                                                    echo !empty($pengajar) ? reset($pengajar)->nama : 'Unknown';
-                                                    ?>
+                                                    <?= $jadwalIqro->nama; ?>
                                                 </td>
                                                 <!-- Fetching Subject Name -->
                                                 <td>
-                                                    <?php
-                                                    // Find the subject by ID
-                                                    $mapel = array_filter($daftar_mapel_quran, function ($m) use ($jadwalQuran) {
-                                                        return $m->id == $jadwalQuran->mata_pelajaran_id;
-                                                    });
-                                                    // Display subject name
-                                                    echo !empty($mapel) ? reset($mapel)->nama_mata_pelajaran : 'Unknown';
-                                                    ?>
+                                                    <?= $jadwalQuran->nama_mata_pelajaran; ?>
                                                 </td>
                                                 <td><?= $jadwalQuran->jam ?></td>
                                                 <td>
-                                                    <?php
-                                                    // Find the subject by ID
-                                                    $pengajar = array_filter($daftar_pengajar, function ($p) use ($jadwalQuran) {
-                                                        return $p->id == $jadwalQuran->tenaga_pengajar_id;
-                                                    });
-                                                    // Display teacher's image if available
-                                                    if (!empty($pengajar)) {
-                                                        $pengajar = reset($pengajar);
-                                                        // Check if the image exists
-                                                        if (!empty($pengajar->gambar)) {
-                                                            // Display the image
-                                                            echo '<img src="' . base_url('/Assets/Images/Pengajar/' . $pengajar->gambar) . '" alt="Teacher Image" width="50">';
-                                                        } else {
-                                                            echo 'No image available';
-                                                        }
-                                                    } else {
-                                                        echo 'Teacher not found';
-                                                    }
-                                                    ?>
+                                                    <img src="<?= base_url('/Assets/Images/Pengajar/' . $jadwalQuran->gambar) ?> " alt="gambar guru" style="width: 50px; height: 50px;">
                                                 </td>
                                                 <td><?= $jadwalQuran->tanggal_input ?></td>
                                                 <td><?= $jadwalQuran->tanggal_edit ?></td>
@@ -238,7 +174,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="card mb-4">
-                        <div class="card-header">
+                        <div class="card-header ">
                             <i class="fas fa-table me-1"></i>
                             Mata Pelajaran Iqro
                         </div>
@@ -259,7 +195,7 @@
                                         if (alertElement) {
                                             alertElement.remove();
                                         }
-                                    }, 2000); // 3000ms = 3 seconds
+                                    }, 4000); // 3000ms = 3 seconds
                                 </script>
                             <?php endif; ?>
 
@@ -377,9 +313,8 @@
     <div class="modal fade" id="tambahJadwalIqro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Jadwal</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/jadwalIqro'); ?>" method="post" enctype="multipart/form-data">
@@ -387,7 +322,7 @@
                         <div class="mb-3">
                             <label class="form-label">Pilih Hari</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" checked required>
+                                <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" required>
                                 <label class="form-check-label" for="monday">Senin</label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -418,7 +353,6 @@
                         <div class="mb-3">
                             <label for="pengajar" class="form-label">Pengajar</label>
                             <select class="form-select" id="pengajar" name="pengajar" required>
-                                <option selected>Pilih Pengajar</option>
                                 <?php foreach ($daftar_pengajar as $pengajar) : ?>
                                     <option value="<?= $pengajar->id ?>"><?= $pengajar->nama ?></option>
                                 <?php endforeach ?>
@@ -427,7 +361,6 @@
                         <div class="mb-3">
                             <label for="mapel_iqro" class="form-label">Mata Pelajaran</label>
                             <select class="form-select" id="mapel_iqro" name="mapel_iqro">
-                                <option selected>Pilih Mata Pelajaran</option>
                                 <?php foreach ($daftar_mapel_iqro as $mapelIqro) : ?>
                                     <option value="<?= $mapelIqro->id ?>">
                                         <?= $mapelIqro->nama_mata_pelajaran ?>
@@ -461,9 +394,8 @@
         <div class="modal fade" id="editJadwalIqro<?= $jadwalIqro->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Jadwal</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/jadwalIqro/' . $jadwalIqro->id); ?>" method="post" enctype="multipart/form-data">
@@ -473,7 +405,7 @@
                                 <label class="form-label">Pilih Hari</label>
                                 <!-- Day selection radio buttons -->
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" checked required>
+                                    <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" required>
                                     <label class="form-check-label" for="monday">Senin</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -504,7 +436,6 @@
                             <div class="mb-3">
                                 <label for="pengajar" class="form-label">Pengajar</label>
                                 <select class="form-select" id="pengajar" name="pengajar" required>
-                                    <option selected>Pilih Pengajar</option>
                                     <?php foreach ($daftar_pengajar as $pengajar) : ?>
                                         <option value="<?= $pengajar->id ?>" <?= $jadwalIqro->tenaga_pengajar_id == $pengajar->id ? 'selected' : '' ?>>
                                             <?= $pengajar->nama ?>
@@ -515,7 +446,6 @@
                             <div class="mb-3">
                                 <label for="mapel_iqro" class="form-label">Mata Pelajaran</label>
                                 <select class="form-select" id="mapel_iqro" name="mapel_iqro" required>
-                                    <option selected>Pilih Mata Pelajaran</option>
                                     <?php foreach ($daftar_mapel_iqro as $mapelIqro) : ?>
                                         <option value="<?= $mapelIqro->id ?>" <?= $jadwalIqro->mata_pelajaran_id == $mapelIqro->id ? 'selected' : '' ?>>
                                             <?= $mapelIqro->nama_mata_pelajaran ?>
@@ -550,9 +480,8 @@
         <div class="modal fade" id="hapusJadwalIqro<?= $jadwalIqro->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus jadwal</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/jadwalIqro/' . $jadwalIqro->id); ?>" method="post">
@@ -560,7 +489,7 @@
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
                                 <!-- <input type="hidden" name="_DELETE"> -->
-                                <p> Apakah anda yakin untuk menghapus jadwal <?= ' "', $jadwalIqro->mata_pelajaran_id, '" '  ?> ini ?</p>
+                                <p> Apakah anda yakin untuk menghapus jadwal <?= ' "', $jadwalIqro->nama_mata_pelajaran, '" '  ?> ini ?</p>
                             </div>
                     </div>
                     <div class="modal-footer">
@@ -578,9 +507,8 @@
     <div class="modal fade" id="tambahJadwalQuran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Jadwal</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/jadwalQuran'); ?>" method="post" enctype="multipart/form-data">
@@ -588,7 +516,7 @@
                         <div class="mb-3">
                             <label class="form-label">Pilih Hari</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" checked required>
+                                <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" required>
                                 <label class="form-check-label" for="monday">Senin</label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -619,16 +547,16 @@
                         <div class="mb-3">
                             <label for="pengajar" class="form-label">Pengajar</label>
                             <select class="form-select" id="pengajar" name="pengajar" required>
-                                <option selected>Pilih Pengajar</option>
                                 <?php foreach ($daftar_pengajar as $pengajar) : ?>
-                                    <option value="<?= $pengajar->id ?>"><?= $pengajar->nama ?></option>
+                                    <option value="<?= $pengajar->id ?>">
+                                        <?= $pengajar->nama ?>
+                                    </option>
                                 <?php endforeach ?>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="mapel_iqro" class="form-label">Mata Pelajaran</label>
+                            <label for="mapel_quran" class="form-label">Mata Pelajaran</label>
                             <select class="form-select" id="mapel_quran" name="mapel_quran">
-                                <option selected>Pilih Mata Pelajaran</option>
                                 <?php foreach ($daftar_mapel_quran as $mapelQuran) : ?>
                                     <option value="<?= $mapelQuran->id ?>">
                                         <?= $mapelQuran->nama_mata_pelajaran ?>
@@ -662,9 +590,8 @@
         <div class="modal fade" id="editJadwalQuran<?= $jadwalQuran->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit jadwal</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/jadwalQuran/' . $jadwalQuran->id); ?>" method="post" enctype="multipart/form-data">
@@ -673,7 +600,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Pilih Hari</label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" checked required>
+                                    <input class="form-check-input" type="radio" name="hari" id="monday" value="Senin" required>
                                     <label class="form-check-label" for="monday">Senin</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -704,7 +631,6 @@
                             <div class="mb-3">
                                 <label for="pengajar" class="form-label">Pengajar</label>
                                 <select class="form-select" id="pengajar" name="pengajar" required>
-                                    <option selected>Pilih Pengajar</option>
                                     <?php foreach ($daftar_pengajar as $pengajar) : ?>
                                         <option value="<?= $pengajar->id ?>" <?= $jadwalQuran->tenaga_pengajar_id == $pengajar->id ? 'selected' : '' ?>>
                                             <?= $pengajar->nama ?>
@@ -713,10 +639,9 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="mapel_iqro" class="form-label">Mata Pelajaran</label>
-                                <select class="form-select" id="mapel_iqro" name="mapel_iqro" required>
-                                    <option selected>Pilih Mata Pelajaran</option>
-                                    <?php foreach ($daftar_mapel_iqro as $mapelQuran) : ?>
+                                <label for="mapel_quran" class="form-label">Mata Pelajaran</label>
+                                <select class="form-select" id="mapel_quran" name="mapel_quran" required>
+                                    <?php foreach ($daftar_mapel_quran as $mapelQuran) : ?>
                                         <option value="<?= $mapelQuran->id ?>" <?= $jadwalQuran->mata_pelajaran_id == $mapelQuran->id ? 'selected' : '' ?>>
                                             <?= $mapelQuran->nama_mata_pelajaran ?>
                                         </option>
@@ -730,11 +655,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="waktu" class="form-label">Jam</label>
-                                    <input type="time" class="form-control" id="waktu" name="waktu">
+                                    <input type="time" class="form-control" id="waktu" name="waktu" value="<?= $jadwalQuran->jam ?>">
                                 </div>
                             </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class=" modal-footer">
                         <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Batal</button>
                         <button type="sumbit" class="btn btn-primary btn-sm">Simpan</button>
                     </div>
@@ -749,7 +674,7 @@
         <div class="modal fade" id="hapusJadwalQuran<?= $jadwalQuran->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus jadwal</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -759,7 +684,7 @@
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
                                 <!-- <input type="hidden" name="_DELETE"> -->
-                                <p> Apakah anda yakin untuk menghapus jadwal <?= ' "', $jadwalQuran->mata_pelajaran_id, '" '  ?> ini ?</p>
+                                <p> Apakah anda yakin untuk menghapus jadwal <?= ' "', $jadwalQuran->nama_mata_pelajaran, '" '  ?> ini ?</p>
                             </div>
                     </div>
                     <div class="modal-footer">
@@ -779,9 +704,8 @@
     <div class="modal fade" id="tambahMapelIqro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Mata Pelajaran</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/mapelIqro'); ?>" method="post" enctype="multipart/form-data">
@@ -806,9 +730,8 @@
         <div class="modal fade" id="editMapelIqro<?= $mapelIqro->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Mata pelajaran</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/mapelIqro/' . $mapelIqro->id); ?>" method="post" enctype="multipart/form-data">
@@ -834,9 +757,8 @@
         <div class="modal fade" id="hapusMapelIqro<?= $mapelIqro->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Mata Pelajaran</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/mapelIqro/' . $mapelIqro->id); ?>" method="post">
@@ -862,9 +784,8 @@
     <div class="modal fade" id="tambahMapelQuran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Mata Pelajaran</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/mapelQuran'); ?>" method="post" enctype="multipart/form-data">
@@ -889,9 +810,8 @@
         <div class="modal fade" id="editMapelQuran<?= $mapelQuran->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Mata Pelajaran</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/mapelQuran/' . $mapelQuran->id); ?>" method="post" enctype="multipart/form-data">
@@ -917,9 +837,8 @@
         <div class="modal fade" id="hapusMapelQuran<?= $mapelQuran->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Mata Pelajaran</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/mapelQuran/' . $mapelQuran->id); ?>" method="post">
