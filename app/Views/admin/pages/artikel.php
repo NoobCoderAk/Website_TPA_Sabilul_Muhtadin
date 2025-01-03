@@ -7,8 +7,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Artikel
+                            <h4 class="fa-table me-1 fw-bold">Artikel</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -162,7 +161,6 @@
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
-                                <!-- <input type="hidden" name="_DELETE"> -->
                                 <p> Apakah anda yakin untuk menghapus Artikel <?= ' "', $artikel->judul, '" '  ?> ini ?</p>
                             </div>
                     </div>

@@ -6,12 +6,6 @@ use App\Controllers\BaseController;
 
 class FasilitasController extends BaseController
 {
-    protected $FasilitasModel;
-
-    public function __construct()
-    {
-        $this->FasilitasModel = new \App\Models\FasilitasModel();
-    }
 
     public function index()
     {

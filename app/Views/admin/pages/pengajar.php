@@ -7,8 +7,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Tenaga Pengajar
+                        <h4 class="fa-table me-1 fw-bold">Tenaga Pengajar</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -27,7 +26,7 @@
                                         if (alertElement) {
                                             alertElement.remove();
                                         }
-                                    }, 2000); // 3000ms = 3 seconds
+                                    }, 2000);
                                 </script>
                             <?php endif; ?>
 
@@ -41,8 +40,8 @@
                                             <th>Jabatan</th>
                                             <th>Gambar</th>
                                             <th>Pengalaman</th>
-                                            <th>tanggal_input</th>
-                                            <th>tanggal_edit</th>
+                                            <th>Tanggal Input</th>
+                                            <th>Tanggal Edit</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -79,9 +78,8 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Pengajar</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/pengajar/'); ?>" method="post" enctype="multipart/form-data">
@@ -112,9 +110,8 @@
         <div class="modal fade" id="editModal<?= $pengajar->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Tenaga Pengajar</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/pengajar/' . $pengajar->id); ?>" method="post" enctype="multipart/form-data">
@@ -146,16 +143,14 @@
         <div class="modal fade" id="hapusModal<?= $pengajar->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Tenaga Pengajar</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/pengajar/' . $pengajar->id); ?>" method="post">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
-                                <!-- <input type="hidden" name="_DELETE"> -->
                                 <p> Apakah anda yakin ? mengahpus <?= ' "', $pengajar->nama, '" '  ?> <strong>akan menghapus data yang berkaitan dengan data ini !!</strong></p>
                             </div>
                     </div>

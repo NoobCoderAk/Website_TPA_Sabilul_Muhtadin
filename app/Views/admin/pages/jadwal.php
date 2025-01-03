@@ -9,8 +9,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Jadwal Iqro
+                            <h4 class="fa-table me-1 fw-bold">Jadwal Iqro</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -92,8 +91,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Jadwal Al-Qur'an
+                            <h4 class="fa-table me-1 fw-bold">Jadwal Al-Qur'an</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -175,8 +173,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header ">
-                            <i class="fas fa-table me-1"></i>
-                            Mata Pelajaran Iqro
+                            <h4 class="fa-table me-1 fw-bold">Mata Pelajaran Iqro</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -243,8 +240,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Mata Pelajaran Al-Qur'an
+                            <h4 class="fa-table me-1 fw-bold">Mata Pelajaran Qur'an</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->

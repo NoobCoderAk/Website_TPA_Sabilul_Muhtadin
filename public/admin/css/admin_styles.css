@@ -53,3 +53,22 @@
     max-height: 124px;
   }
 }
+
+.popover {
+  background-color: #343a40 !important;
+  /* Dark background */
+  color: white !important;
+  padding: 10px;
+  /* Light text */
+}
+
+.popover .popover-body {
+  background-color: #343a40 !important;
+
+  /* Optional: Reduce padding if needed */
+}
+
+.popover-arrow {
+  border-bottom-color: #343a40 !important;
+  /* Match arrow with popover background */
+}

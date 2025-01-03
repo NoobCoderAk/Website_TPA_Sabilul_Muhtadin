@@ -17,10 +17,10 @@
                         <div class="card-body row">
                             <div class="card-text-container col">
                                 <h5 class="row">Tenaga Pengajar</h5>
-                                <p class="row">10</p>
+                                <p class="row"><?= $countPengajar; ?></p>
                             </div>
                             <div class="card-img-container col">
-                                <img class="card-img" src="https://via.placeholder.com/64" alt="icon" />
+                                <img class="card-img" src="/Assets/Images/template/dash-pengajar.png" alt="icon" />
                             </div>
                         </div>
                     </div>
@@ -28,10 +28,10 @@
                         <div class="card-body row">
                             <div class="card-text-container col">
                                 <h5 class="row">Artikel</h5>
-                                <p class="row">10</p>
+                                <p class="row"><?= $countArtikel; ?></p>
                             </div>
                             <div class="card-img-container col">
-                                <img class="card-img" src="https://via.placeholder.com/64" alt="icon" />
+                                <img class="card-img" src="/Assets/Images/template/dash-artikel.png" alt="icon" />
                             </div>
                         </div>
                     </div>
@@ -39,10 +39,10 @@
                         <div class="card-body row">
                             <div class="card-text-container col">
                                 <h5 class="row">Fasilitas</h5>
-                                <p class="row">10</p>
+                                <p class="row"><?= $countFasilitas; ?></p>
                             </div>
                             <div class="card-img-container col">
-                                <img class="card-img" src="https://via.placeholder.com/64" alt="icon" />
+                                <img class="card-img" src="/Assets/Images/template/dash-fasilitas.png" alt="icon" />
                             </div>
                         </div>
                     </div>

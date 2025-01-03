@@ -17,6 +17,7 @@ use App\Models\MapelQuranModel;
 use App\Models\PertanyaanModel;
 use App\Models\PengajarModel;
 use App\Models\KontakModel;
+use App\Models\UserModel;
 
 /**
  * Class BaseController
@@ -72,5 +73,6 @@ abstract class BaseController extends Controller
         $this->MapelIqroModel = new MapelIqroModel();
         $this->MapelQuranModel = new MapelQuranModel();
         $this->KontakModel = new KontakModel();
+        $this->UserModel = new UserModel();
     }
 }

@@ -16,4 +16,9 @@ class FasilitasModel extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'tanggal_input';
     protected $updatedField  = 'tanggal_edit';
+
+    public function getTableFasilitasLength()
+    {
+        return $this->db->table($this->table)->countAll();
+    }
 }

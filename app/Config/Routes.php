@@ -37,7 +37,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('logout', 'Admin\Login::logout');
     $routes->get('dashboard', 'Admin\Dashboard::index');
     $routes->get('edit-account', 'Admin\Account::edit');
-    $routes->post('update-account', 'Admin\Account::update');
+    $routes->put('update-account/(:num)', 'Admin\Account::update/$1');
 
 
     // ADMIN FASILITAS

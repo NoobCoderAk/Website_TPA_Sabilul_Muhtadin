@@ -11,6 +11,7 @@ use App\Controllers\Admin\Dashboard;
     <title><?= $title; ?></title>
     <link rel="stylesheet" type="text/css" href="<?= base_url('admin'); ?>/css/admin_styles.css">
 
+
     <!-- library tinyTinyMCE cloud untuk textaerea custom -->
 
     <!-- Bootstrap CDN -->
@@ -19,47 +20,60 @@ use App\Controllers\Admin\Dashboard;
 
 <body style="font-family: Arial, sans-serif;">
 
-    <nav class="navbar navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-dark bg-dark fixed-top w-100">
         <div class="container-fluid">
-            <div class="row w-100 m-auto">
-                <div class="col col-4 ">
+            <!-- Navbar Brand and Toggler -->
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center ms-4">
                     <a class="navbar-brand" href="#">TPA Sabilul Muhtadin</a>
-                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div>
+                    <button type="button"
+                        class="btn"
+                        data-bs-toggle="popover"
+                        data-bs-html="true"
+                        data-bs-placement="left"
+                        data-bs-content='
+                        <div class="text-center">
+                            <img src="/Assets/Images/template/profile.png" alt="Sample Image" class="img-fluid rounded mb-2" style="width:20px !important; height:20px !important;">
+                            <a href="<?= base_url('admin/edit-account') ?>" class="btn btn-link text-light fw-bold">Manajemen Akun</a>
+                            <a href="<?= base_url('admin/logout') ?>" class="btn btn-danger w-50">Log Out</a> 
+                        </div>'>
+                        <img src="/Assets/Images/template/profile.png" alt="Sample Image" class="img-fluid rounded mb-2" style="width:50px; height:50px;">
                     </button>
                 </div>
             </div>
 
+            <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">TPA Sabilul Muhtadin</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div>
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <!-- Main Navigation Links -->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        </li>
+                    </ul>
 
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- Pages Section -->
                     <div class="mt-4">
-                        <h6 class="mb-3" style="color:grey; font-weight:bold;">PAGES</h6>
-                        <ul class="navbar-nav ms-2  justify-content-end flex-grow-1 pe-3">
+                        <h6 class="mb-3 text-secondary fw-bold">PAGES</h6>
+                        <ul class="navbar-nav ms-2 justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Beranda
-                                </a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Beranda</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="<?= base_url('admin/fasilitas') ?>">Fasilitas</a></li>
                                     <li><a class="dropdown-item" href="<?= base_url('admin/review') ?>">Testimoni</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Publikasi
-                                </a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publikasi</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="<?= base_url('admin/jadwal') ?>">Jadwal Kegiatan</a></li>
                                     <li><a class="dropdown-item" href="<?= base_url('admin/artikel') ?>">Kabar Terbaru</a></li>
@@ -76,16 +90,18 @@ use App\Controllers\Admin\Dashboard;
                                 <a class="nav-link" href="<?= base_url('admin/kontak') ?>">Hubungi Kami</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Manajemen Akun</a>
+                                <a class="nav-link" href="<?= base_url('admin/edit-account') ?>">Manajemen Akun</a>
                             </li>
+                            <li class="nav-item mt-3">
 
-                            <button type="submit" onclick="location.href = '<?= base_url() ?>/admin/logout';" class="btn btn-danger" style="text-align: center; max-width:80px;">Log out</button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
     <div style="height: 80px;">
 
     </div>
@@ -94,10 +110,15 @@ use App\Controllers\Admin\Dashboard;
     <!-- to render content page -->
     <?= $this->renderSection('contentView') ?>
 
+
     <!-- Bootstrap and JavaScript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="<?= base_url('Assets'); ?>/admin/js/datatables-simple-demo.js"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
 
 
 </body>

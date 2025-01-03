@@ -6,13 +6,19 @@ use App\Controllers\BaseController;
 
 class Dashboard extends BaseController
 {
-    protected $UserModel;
 
 
     public function index()
     {
+        $tablePengajarLength = $this->PengajarModel->getTablePengajarLength();
+        $tableArtikelLength = $this->ArtikelModel->getTableArtikelLength();
+        $tableFasilitasLength = $this->FasilitasModel->getTableFasilitasLength();
+
         $data = [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'countPengajar' => $tablePengajarLength,
+            'countArtikel' => $tableArtikelLength,
+            'countFasilitas' => $tableFasilitasLength,
         ];
         return view('admin/pages/dashboard', $data);
     }

@@ -101,4 +101,7 @@
             </div>
         </div>
     </div>
+    <a href="<?= $data->link_wa; ?>" class="fab">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 </div>

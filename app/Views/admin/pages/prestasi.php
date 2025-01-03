@@ -7,8 +7,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Prestasi
+                        <h4 class="fa-table me-1 fw-bold">Prestasi</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->

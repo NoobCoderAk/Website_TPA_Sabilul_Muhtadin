@@ -7,8 +7,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Pertanyaan
+                        <h4 class="fa-table me-1 fw-bold">Pertanyaan</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -75,9 +74,8 @@
     <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header bg-primary">
+                <div class="modal-header bg-dark text-light">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Pertanyaan</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url('admin/add/pertanyaan/'); ?>" method="post" enctype="multipart/form-data">
@@ -106,9 +104,8 @@
         <div class="modal fade" id="editModal<?= $pertanyaan->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Pertanyaan</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/edit/pertanyaan/' . $pertanyaan->id); ?>" method="post" enctype="multipart/form-data">
@@ -136,16 +133,14 @@
         <div class="modal fade" id="hapusModal<?= $pertanyaan->id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary">
+                    <div class="modal-header bg-dark text-light">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Pertanyaan</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="<?= base_url('admin/delete/pertanyaan/' . $pertanyaan->id); ?>" method="post">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <div class="mb-3">
-                                <!-- <input type="hidden" name="_DELETE"> -->
                                 <p> Apakah anda yakin untuk menghapus Galeri <?= ' "', $pertanyaan->pertanyaan, '" '  ?> ini ?</p>
                             </div>
                     </div>

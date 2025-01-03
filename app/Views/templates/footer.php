@@ -1,9 +1,7 @@
 <!-- Footer -->
 
 <!-- Floating Action Button -->
-<a href="#" class="fab">
-    <i class="bi bi-whatsapp"></i>
-</a>
+
 <section id="footer">
     <footer class="footer">
         <div class="container">
