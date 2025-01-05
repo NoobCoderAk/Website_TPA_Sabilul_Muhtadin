@@ -12,11 +12,12 @@ class Pertanyaan extends BaseController
     {
         $data = [
             'title' => 'Halaman Pertanyaan',
+            'kontak' => $this->KontakModel->findAll(),
         ];
         $data['pertanyaan'] = $this->PertanyaanModel->paginate(9);
         $data['pager'] = $this->PertanyaanModel->pager;
         echo view('templates/header', $data);
         echo view('user/pertanyaan', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 }

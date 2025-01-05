@@ -21,6 +21,8 @@ $routes->get('artikel/get_artikel/(:num)', 'User\Artikel::get_artikel/$1');
 $routes->get('prestasi/get_prestasi/(:num)', 'User\Prestasi::get_prestasi/$1');
 
 
+$routes->get('form', 'Admin\TestController::index');
+$routes->post('form', 'Admin\TestController::index');
 
 
 // =================== ADMIN ========================

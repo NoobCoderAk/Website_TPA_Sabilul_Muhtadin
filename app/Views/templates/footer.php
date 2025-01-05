@@ -24,7 +24,7 @@
                 <div class="col-md-4 footer-links">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="<?= base_url() ?>/kontak">Contact Us</a></li>
+                        <li><a href="<?= base_url() ?>/kontak">Hubungi Kami</a></li>
                         <li><a href="<?= base_url() ?>/about">Tentang Kami</a></li>
                         <li><a href="<?= base_url() ?>/pertanyaan">FAQ</a></li>
                         <li><a href="<?= base_url() ?>/prestasi">Prestasi</a></li>
@@ -32,13 +32,16 @@
                 </div>
 
                 <div class="col-md-4 footer-contact">
-                    <h5>Contact us</h5>
-                    <p>Anda bisa hubungi kami untuk info yang lebih detail melalui nomor di bawah ini.</p>
-                    <p><strong>0857-1242-1259</strong></p>
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                    </div>
+                    <?php foreach ($kontak as $kontak):
+                    ?>
+                        <h5>Hubingi Kami</h5>
+                        <p>Anda bisa hubungi kami untuk info yang lebih detail melalui nomor di bawah ini.</p>
+                        <p><strong><?= $kontak->no_telp; ?></strong></p>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
 

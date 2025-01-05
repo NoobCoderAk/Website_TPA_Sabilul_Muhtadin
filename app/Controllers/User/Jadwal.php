@@ -6,19 +6,12 @@ use App\Controllers\BaseController;
 
 class Jadwal extends BaseController
 {
-    public function __construct()
-    {
-        $this->MapelIqroModel = new \App\Models\MapelIqroModel();
-        $this->MapelQuranModel = new \App\Models\MapelQuranModel();
-        $this->PengajarModel = new \App\Models\PengajarModel();
-        $this->JadwalIqroModel = new \App\Models\JadwalIqroModel();
-        $this->JadwalQuranModel = new \App\Models\JadwalQuranModel();
-    }
-
     public function index()
     {
         $data = [
             'title' => 'Halaman Jadwal',
+            'kontak' => $this->KontakModel->findAll(),
+
             'mapel_iqro' => $this->MapelIqroModel->findAll(),
             'mapel_quran' => $this->MapelQuranModel->findAll(),
             'jadwal_iqro' => $this->JadwalIqroModel->findAll(),
@@ -43,6 +36,6 @@ class Jadwal extends BaseController
         ];
         echo view('templates/header', $data);
         echo view('user/jadwal', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 }

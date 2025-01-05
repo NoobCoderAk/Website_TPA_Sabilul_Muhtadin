@@ -14,6 +14,6 @@ class Kontak extends BaseController
         ];
         echo view('templates/header', $data);
         echo view('user/kontak', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 }

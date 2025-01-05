@@ -15,11 +15,12 @@ class Artikel extends BaseController
             'title' => 'Halaman Artikel',
             'artikel' => $this->ArtikelModel->paginate(9),
             'pager' => $this->ArtikelModel->pager,
+            'kontak' => $this->KontakModel->findAll(),
 
         ];
         echo view('templates/header', $data);
         echo view('user/artikel', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 
     // public function get_artikel($id)

@@ -12,12 +12,13 @@ class Prestasi extends BaseController
     {
         $data = [
             'title' => 'Halaman Prestasi',
+            'kontak' => $this->KontakModel->findAll(),
         ];
         $data['prestasi'] = $this->PrestasiModel->paginate(3);
         $data['pager'] = $this->PrestasiModel->pager;
         echo view('templates/header', $data);
         echo view('user/prestasi', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 
     public function get_prestasi($id)

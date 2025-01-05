@@ -12,9 +12,10 @@ class About extends BaseController
         $data = [
             'title' => 'Halaman About',
             'pengajar' => $this->PengajarModel->findAll(),
+            'kontak' => $this->KontakModel->findAll(),
         ];
         echo view('templates/header', $data);
         echo view('user/about', $data);
-        echo view('templates/footer');
+        echo view('templates/footer', $data);
     }
 }
