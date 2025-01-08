@@ -6,15 +6,6 @@ use App\Controllers\BaseController;
 
 class JadwalController extends BaseController
 {
-    public function __construct()
-    {
-        $this->MapelIqroModel = new \App\Models\MapelIqroModel();
-        $this->MapelQuranModel = new \App\Models\MapelQuranModel();
-        $this->PengajarModel = new \App\Models\PengajarModel();
-        $this->JadwalIqroModel = new \App\Models\JadwalIqroModel();
-        $this->JadwalQuranModel = new \App\Models\JadwalQuranModel();
-    }
-
     public function index()
     {
         $data = [

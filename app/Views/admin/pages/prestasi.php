@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="card mb-4">
                         <div class="card-header">
-                        <h4 class="fa-table me-1 fw-bold">Prestasi</h4>
+                            <h4 class="fa-table me-1 fw-bold">Prestasi</h4>
                         </div>
                         <div class="card-body">
                             <!-- Button trigger modal -->
@@ -61,8 +61,8 @@
                                                 <td><?= $prestasi->tanggal_input ?></td>
                                                 <td><?= $prestasi->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $prestasi->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $prestasi->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $prestasi->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $prestasi->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

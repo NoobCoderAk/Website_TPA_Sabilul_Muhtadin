@@ -55,8 +55,8 @@
                                                 <td><?= $review->tanggal_input ?></td>
                                                 <td><?= $review->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $review->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $review->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $review->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $review->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

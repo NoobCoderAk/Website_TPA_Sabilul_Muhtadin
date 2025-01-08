@@ -23,15 +23,15 @@ class Prestasi extends BaseController
 
     public function get_prestasi($id)
     {
-        // Fetch the article from the database by ID
+        // Fetch artikel by id
         $prestasi = $this->PrestasiModel->find($id);
 
-        // Check if the article exists
+        // cek artikel ada atau tidak
         if (!$prestasi) {
             return $this->response->setStatusCode(404)->setJSON(['error' => 'Artikel not found']);
         }
 
-        // Return article as JSON response
+        // return JSON 
         return $this->response->setJSON($prestasi);
     }
 }

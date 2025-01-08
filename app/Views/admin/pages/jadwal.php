@@ -69,8 +69,8 @@
                                                 <td><?= $jadwalIqro->tanggal_input ?></td>
                                                 <td><?= $jadwalIqro->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editJadwalIqro<?= $jadwalIqro->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusJadwalIqro<?= $jadwalIqro->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusJadwalIqro<?= $jadwalIqro->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editJadwalIqro<?= $jadwalIqro->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
@@ -151,8 +151,8 @@
                                                 <td><?= $jadwalQuran->tanggal_input ?></td>
                                                 <td><?= $jadwalQuran->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editJadwalQuran<?= $jadwalQuran->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusJadwalQuran<?= $jadwalQuran->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusJadwalQuran<?= $jadwalQuran->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editJadwalQuran<?= $jadwalQuran->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
@@ -217,8 +217,8 @@
                                                 <td><?= $mapelIqro->tanggal_input ?></td>
                                                 <td><?= $mapelIqro->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editMapelIqro<?= $mapelIqro->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusMapelIqro<?= $mapelIqro->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusMapelIqro<?= $mapelIqro->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editMapelIqro<?= $mapelIqro->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
@@ -284,8 +284,8 @@
                                                 <td><?= $mapelQuran->tanggal_input ?></td>
                                                 <td><?= $mapelQuran->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editMapelQuran<?= $mapelQuran->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusMapelQuran<?= $mapelQuran->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusMapelQuran<?= $mapelQuran->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editMapelQuran<?= $mapelQuran->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

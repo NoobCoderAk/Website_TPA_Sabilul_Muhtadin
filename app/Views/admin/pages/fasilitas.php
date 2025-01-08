@@ -53,8 +53,8 @@
                                                 <td><?= $fasilitas->tanggal_input ?></td>
                                                 <td><?= $fasilitas->tanggal_edit ?></td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $fasilitas->id ?>"><i class="fas fa-edit"></i>Edit</button>
-                                                    <button type="button" class="btn btn-danger btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $fasilitas->id ?>"><i class="fas fa-trash"></i>Hapus</button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $fasilitas->id ?>"><img src="<?= base_url("Assets/Images/template/delete_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
+                                                    <button type="button" class="btn btn-sm mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#editModal<?= $fasilitas->id ?>"><img src="<?= base_url("Assets/Images/template/edit_icon.png"); ?>" style="height:28px; width:24px;" alt=""></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

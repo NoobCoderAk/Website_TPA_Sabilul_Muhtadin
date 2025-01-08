@@ -6,12 +6,6 @@ use App\Controllers\BaseController;
 
 class ReviewController extends BaseController
 {
-    protected $ReviewModel;
-
-    public function __construct()
-    {
-        $this->ReviewModel = new \App\Models\ReviewModel();
-    }
 
     public function index()
     {

@@ -6,12 +6,6 @@ use App\Controllers\BaseController;
 
 class PrestasiController extends BaseController
 {
-    protected $PrestasiModel;
-
-    public function __construct()
-    {
-        $this->PrestasiModel = new \App\Models\PrestasiModel();
-    }
 
     public function index()
     {

@@ -28,20 +28,36 @@
                             <form action="<?= base_url('admin/update/kontak/'); ?>" method="post" enctype="multipart/form-data">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="id" value="<?= $kontak->id ?? ''; ?>">
-
-                                <div class="mb-3">
+                                <div class="d-flex row ms-1">
                                     <!-- Email -->
-                                    <label for="email" class="p-2 fw-semibold">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Masukkan Email disini..." class="form-control" value="<?= $kontak->email ?? ''; ?>">
-
+                                    <div class="col" style="width:450px;">
+                                        <div class="row">
+                                            <label for="email" class="p-2 fw-semibold">Email</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="email" name="email" id="email" placeholder="Masukkan Email disini..." class="form-control" style="width:450px; max-width:100%" value="<?= $kontak->email ?? ''; ?>">
+                                        </div>
+                                    </div>
                                     <!-- Phone -->
-                                    <label for="phone" class="p-2 fw-semibold">No. Telepon</label>
-                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Masukkan No HP disini..." style="max-width:200px;" value="<?= $kontak->no_telp ?? ''; ?>">
-
+                                    <div class="col ms-4">
+                                        <div class="row">
+                                            <label for="phone" class="p-2 fw-semibold">No. Telepon</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Masukkan No HP disini..." style="max-width:200px;" value="<?= $kontak->no_telp ?? ''; ?>">
+                                        </div>
+                                    </div>
                                     <!-- Jam Buka -->
-                                    <label for="jam" class="p-2 fw-semibold">Jam Buka</label>
-                                    <input type="time" name="jam" id="jam" placeholder="Masukkan jam disini..." class="form-control" style="max-width:120px;" value="<?= $kontak->jam_buka ?? ''; ?>">
-
+                                    <div class="col ms-4">
+                                        <div class="row">
+                                            <label for="jam" class="p-2 fw-semibold">Jam Buka</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="time" name="jam" id="jam" placeholder="Masukkan jam disini..." class="form-control" style="max-width:120px;" value="<?= $kontak->jam_buka ?? ''; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
                                     <!-- Link Google Maps -->
                                     <label for="map" class="p-2 fw-semibold">Link Lokasi Google Maps</label>
                                     <input type="text" name="map" id="map" placeholder="Masukkan link lokasi disini..." class="form-control" value="<?= $kontak->link_maps ?? ''; ?>">

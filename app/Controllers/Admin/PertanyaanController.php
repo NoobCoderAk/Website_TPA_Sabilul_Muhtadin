@@ -6,13 +6,6 @@ use App\Controllers\BaseController;
 
 class PertanyaanController extends BaseController
 {
-    protected $PertanyaanModel;
-
-    public function __construct()
-    {
-        $this->PertanyaanModel = new \App\Models\PertanyaanModel();
-    }
-
     public function index()
     {
         $data = [

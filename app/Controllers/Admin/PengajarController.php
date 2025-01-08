@@ -6,12 +6,6 @@ use App\Controllers\BaseController;
 
 class PengajarController extends BaseController
 {
-    protected $PengajarModel;
-
-    public function __construct()
-    {
-        $this->PengajarModel = new \App\Models\PengajarModel();
-    }
 
     public function index()
     {

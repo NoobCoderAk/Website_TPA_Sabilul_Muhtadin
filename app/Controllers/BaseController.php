@@ -18,6 +18,8 @@ use App\Models\PertanyaanModel;
 use App\Models\PengajarModel;
 use App\Models\KontakModel;
 use App\Models\UserModel;
+use App\Models\JadwalIqroModel;
+use App\Models\JadwalQuranModel;
 
 /**
  * Class BaseController
@@ -72,6 +74,8 @@ abstract class BaseController extends Controller
         $this->PengajarModel = new PengajarModel();
         $this->MapelIqroModel = new MapelIqroModel();
         $this->MapelQuranModel = new MapelQuranModel();
+        $this->JadwalIqroModel = new JadwalIqroModel();
+        $this->JadwalQuranModel = new JadwalQuranModel();
         $this->KontakModel = new KontakModel();
         $this->UserModel = new UserModel();
     }

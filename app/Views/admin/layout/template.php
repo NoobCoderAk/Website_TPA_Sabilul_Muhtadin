@@ -66,14 +66,14 @@ use App\Controllers\Admin\Dashboard;
                         <h6 class="mb-3 text-secondary fw-bold">PAGES</h6>
                         <ul class="navbar-nav ms-2 justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Beranda</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?= base_url("Assets/Images/template/beranda-icon.png"); ?>" style="height:18px; width:18px; margin-right:8px;" alt="">Beranda</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="<?= base_url('admin/fasilitas') ?>">Fasilitas</a></li>
                                     <li><a class="dropdown-item" href="<?= base_url('admin/review') ?>">Testimoni</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Publikasi</a>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="<?= base_url("Assets/Images/template/publikasi-icon.png"); ?>" style="height:18px; width:18px; margin-right:8px;" alt="">Publikasi</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="<?= base_url('admin/jadwal') ?>">Jadwal Kegiatan</a></li>
                                     <li><a class="dropdown-item" href="<?= base_url('admin/artikel') ?>">Kabar Terbaru</a></li>
@@ -81,16 +81,16 @@ use App\Controllers\Admin\Dashboard;
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('admin/pengajar') ?>">Tenaga Pengajar</a>
+                                <a class="nav-link" href="<?= base_url('admin/pengajar') ?>"><img src="<?= base_url("Assets/Images/template/pengajar-icon.png"); ?>" style="height:18px; width:18px; margin-right:8px;" alt="">Tenaga Pengajar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('admin/pertanyaan') ?>">FAQ</a>
+                                <a class="nav-link" href="<?= base_url('admin/pertanyaan') ?>"><img src="<?= base_url("Assets/Images/template/faq-icon.png"); ?>" style="height:18px; width:18px; margin-right:8px;" alt="">FAQ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('admin/kontak') ?>">Hubungi Kami</a>
+                                <a class="nav-link" href="<?= base_url('admin/kontak') ?>"><img src="<?= base_url("Assets/Images/template/kontak-icon.png"); ?>" style="height:18px; width:18px; margin-right:8px;" alt="">Hubungi Kami</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('admin/edit-account') ?>">Manajemen Akun</a>
+                                <a class="nav-link" href="<?= base_url('admin/edit-account') ?>"><img src="<?= base_url("Assets/Images/template/profile.png"); ?>" style="height:20px; width:20px; margin-right:8px;" alt="">Manajemen Akun</a>
                             </li>
                             <li class="nav-item mt-3">
 
@@ -102,7 +102,7 @@ use App\Controllers\Admin\Dashboard;
         </div>
     </nav>
 
-    <div style="height: 80px;">
+    <div style="height: 100px;">
 
     </div>
 
@@ -112,6 +112,8 @@ use App\Controllers\Admin\Dashboard;
 
 
     <!-- Bootstrap and JavaScript CDN -->
+    <script src="https://kit.fontawesome.com/e5ef487ae9.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
     <script src="<?= base_url('Assets'); ?>/admin/js/datatables-simple-demo.js"></script>
